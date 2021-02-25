@@ -1,0 +1,11 @@
+@import '~Base/theme.scss';
+
+.header {
+  padding: 3.071rem 1.714rem 2.929rem 1.714rem;
+  background-color: $black;
+
+  &__text {
+    font-family: Arial, sans-serif;
+    color: $white;
+  }
+}
