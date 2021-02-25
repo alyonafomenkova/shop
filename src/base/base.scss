@@ -1,0 +1,24 @@
+@import '~Base/theme.scss';
+@import '~Base/variables.scss';
+@import '~Normalize';
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+  font-family: 'Open Sans', 'Arial', sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  font-style: normal;
+  font-weight: normal;
+  color: $black;
+  background-color: $gray;
+
+  @media (min-width: $desktop-width-m) {
+    font-size: 18px;
+  }
+}
+
+body {
+  height: 100%;
+  margin: 0 auto;
+}

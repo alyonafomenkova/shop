@@ -1,0 +1,12 @@
+@mixin setupFont($family, $style, $weight, $display, $path) {
+  @font-face {
+    font-family: $family;
+    font-style: $style;
+    font-weight: $weight;
+    font-display: $display;
+    src: url('#{$path}.woff2') format('woff2'), url('#{$path}.woff') format('woff');
+  }
+}
+
+@include setupFont('Open Sans', normal, normal, swap, '~Fonts/opensans/opensans-regular');
+@include setupFont('Open Sans', normal, bold, swap, '~Fonts/opensans/opensans-bold');
