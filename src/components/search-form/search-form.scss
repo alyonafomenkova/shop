@@ -1,0 +1,100 @@
+@import '~Base/theme.scss';
+@import '~Base/variables.scss';
+
+.search-form {
+  display: flex;
+
+  &__wrapper {
+    display: flex;
+    align-items: flex-start;
+    flex-grow: 1;
+    max-width: 78.143rem;
+    position: relative;
+
+    &::before {
+      content: '';
+      width: 0;
+      height: 1.143rem;
+      position: absolute;
+      left: 3.214rem;
+      top: 0.857rem;
+      border: 1px solid $black;
+      opacity: 0.5;
+    }
+  }
+
+  &__input {
+    flex-grow: 1;
+    padding: 0.786rem 1.786rem 0.571rem 3.929rem;
+    border: 0.071rem solid $silver;
+    border-right: none;
+    border-radius: 0.357rem 0 0 0.357rem;
+    background-image: url('./images/search.svg');
+    background-repeat: no-repeat;
+    background-position: 1.143rem center;
+    cursor: pointer;
+
+    @media (min-width: $tablet-width) {
+      padding: 0.786rem 4rem 0.571rem 3.929rem;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $light-gray;
+    }
+
+    &:hover {
+      border-color: $light-gray;
+    }
+
+    &:invalid + &__clear-input {
+      display: none;
+    }
+  }
+
+  &__clear-input {
+    width: 1.214rem;
+    height: 1.214rem;
+    position: absolute;
+    top: 0.857rem;
+    right: 4.5rem;
+    background-image: url('./images/cross.svg');
+    background-repeat: no-repeat;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    @media (min-width: $mobile-width-m) {
+      right: 5.357rem;
+    }
+
+    @media (min-width: $tablet-width) {
+      right: 11.643rem;
+    }
+
+    &:focus {
+      outline: none;
+      opacity: 0.8;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__search-button-wrapper {
+    @media (min-width: $tablet-width) {
+      width: 10.357rem;
+      margin-right: 0.786rem;
+    }
+  }
+
+  &__close-button-wrapper {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: block;
+      width: 8.357rem;
+    }
+  }
+}

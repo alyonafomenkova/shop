@@ -1,0 +1,11 @@
+include ../button/button
+
+mixin search-form
+  form.search-form(action="url" method="post" role="search")
+    div.search-form__wrapper
+      input.search-form__input(type="search" name="search" aria-label="Поиск по сайту" value="Запрос пользователя")
+      input.search-form__clear-input(type="reset" value="" alt="Очистить")
+      div.search-form__search-button-wrapper
+        +button({type: 'submit', view: 'search', content: 'Найти'})
+    div.search-form__close-button-wrapper
+      +button({type: 'reset', view: 'bordered', content: 'Закрыть'})
