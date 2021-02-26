@@ -1,8 +1,9 @@
 @import '~Base/theme.scss';
+@import '~Base/variables.scss';
 
 .button {
   width: 100%;
-  padding: 0.857rem;
+  padding: 0.786rem 0.357rem;
   border: none;
   background: none;
   word-break: break-all;
@@ -10,9 +11,14 @@
   text-align: center;
   font-weight: bold;
 
+  @media (min-width: $tablet-width) {
+    padding: 0.786rem;
+  }
+
   &_view_search {
     background-color: $yellow;
     border-radius: 0 0.214rem 0.214rem 0;
+    border: 0.071rem solid transparent;
 
     &:hover,
     &:focus {
