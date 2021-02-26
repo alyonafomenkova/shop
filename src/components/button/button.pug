@@ -1,0 +1,27 @@
+mixin button({ type = 'button', view, state, url, content } = options)
+  -
+    const typeModifiers = {
+      button: 'button_type_button',
+      submit: 'button_type_submit',
+      link: 'button_type_link'
+    };
+    const viewModifiers = {
+      filled: 'button_view_filled',
+      search: 'button_view_search',
+      bordered: 'button_view_bordered',
+      textual: 'button_view_textual',
+      sorting: 'button_view_sorting',
+      'sorting-textual': 'button_view_sorting-textual',
+    };
+    const stateModifiers = {
+      active: `${viewModifiers[view]}-active`
+    };
+    const classes = [
+      typeModifiers[type],
+      viewModifiers[view],
+      stateModifiers[state]
+    ];
+    const tag = type === 'link' ? 'a' : 'button';
+    const buttonType = type === 'link' ? false : type;
+
+  #{tag}.button(type=buttonType, class=classes, href=url) !{content}

@@ -1,0 +1,99 @@
+@import '~Base/theme.scss';
+
+.button {
+  width: 100%;
+  padding: 0.857rem;
+  border: none;
+  background: none;
+  word-break: break-all;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+
+  &_view_search {
+    background-color: $yellow;
+    border-radius: 0 0.214rem 0.214rem 0;
+
+    &:hover,
+    &:focus {
+      background-color: $light-yellow;
+    }
+  }
+
+  &_view_filled {
+    background-color: $yellow;
+    border-radius: 0.214rem;
+
+    &:hover,
+    &:focus {
+      background-color: $light-yellow;
+    }
+  }
+
+  &_view_bordered {
+    background-color: $white;
+    border: 1px solid $dark-gray;
+    box-sizing: border-box;
+    border-radius: 0.214rem;
+
+    &:hover,
+    &:focus {
+      border-color: $light-gray;
+    }
+  }
+
+  &_view_textual {
+    padding: 0;
+    font-size: 0.714rem;
+    line-height: 0.786rem;
+    font-weight: normal;
+    text-decoration-line: underline;
+    color: $pewter;
+    opacity: 0.5;
+
+    &:hover,
+    &-on-hover {
+      opacity: 0.3;
+    }
+  }
+
+  &_view_sorting {
+    padding: 0.5rem;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-weight: normal;
+    line-height: 1.357rem;
+    background-color: $beige;
+    border-radius: 0.214rem;
+
+    &:hover,
+    &-on-hover,
+    &-active {
+      background-color: $light-beige;
+    }
+  }
+
+  &_view_sorting-textual {
+    width: auto;
+    padding: 0;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-weight: normal;
+    line-height: 1.357rem;
+    color: $blue;
+
+    &:hover,
+    &-on-hover {
+      color: $light-blue;
+    }
+
+    &-active {
+      border-bottom: 0.071rem solid $yellow;
+      color: $pewter;
+
+      &:hover,
+      &:focus {
+        color: $pewter;
+        opacity: 0.7;
+      }
+    }
+  }
+}
