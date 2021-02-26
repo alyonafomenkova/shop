@@ -17,6 +17,7 @@ module.exports = {
     'max-len': ['error', { code: 140 }],
     'no-trailing-spaces': ['error', { skipBlankLines: true }],
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+    'no-new': 0,
   },
   settings: {
     'import/resolver': {
