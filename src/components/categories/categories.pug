@@ -1,0 +1,17 @@
+mixin categories(options = {})
+  -
+    const defaultItems = require('../../components/categories/categories.json');
+    const {
+      items = defaultItems
+    } = options;
+  div.categories
+    ul.categories__list.glider
+      each item in items
+        - let { imgSrc, alt, title, goodsCount } = item;
+        li.categories__item.js-categories__item
+          a.categories__link
+            div.categories__img-wrapper
+              img.categories__img(src=imgSrc alt=alt)
+            div.categories__description-wrapper
+              span.categories__title !{title}
+              span.categories__goods-count !{goodsCount} товара

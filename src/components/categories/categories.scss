@@ -1,0 +1,63 @@
+@import '~Base/mixins/reset-list-style.scss';
+@import '~Base/theme.scss';
+@import '~Glider/glider.min.css';
+
+.categories {
+  position: relative;
+
+  &::after {
+    content: '';
+    width: 75px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    background: $white-gradient;
+  }
+
+  &__list {
+    @include reset-list-style;
+    display: flex;
+  }
+
+  &__item {
+    min-width: 16.571rem;
+    margin-right: 1.429rem;
+    flex-shrink: 0;
+    border-right: 0.071rem solid $metallic;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    padding-right: 1.429rem;
+  }
+
+  &__img-wrapper {
+    flex-shrink: 0;
+    width: 4.286rem;
+    height: 4.286rem;
+    margin-right: 0.714rem;
+    background-color: $silver;
+    border-radius: 0.214rem;
+  }
+
+  &__description-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    display: block;
+    margin-bottom: 0.643rem;
+    line-height: 1.357rem;
+    color: $pewter;
+  }
+
+  &__goods-count {
+    font-size: 0.857rem;
+    line-height: 1.143rem;
+    color: $silk;
+  }
+}
