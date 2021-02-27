@@ -1,0 +1,19 @@
+mixin checkbox({ title = 'Чекбоксы', items } = options)
+  div.checkbox
+    div.checkbox__wrapper
+      h2.checkbox__title !{title}
+      button.checkbox__clear-button.js-checkbox__clear-button(type="button") Очистить
+    ul.checkbox__list
+      if (items)
+        each item, index in items
+          - let { name, label, quantity, isDisabled, isChecked } = item;
+          li.checkbox__item(class=isDisabled && "checkbox__item_disabled")
+            input.checkbox__input.js-checkbox__input(
+              type="checkbox",
+              id=`${name}-${index}-id`,
+              name=name,
+              checked=isChecked,
+              disabled=isDisabled,
+            )
+            label.checkbox__label(for=`${name}-${index}-id`) #{label}
+              span.checkbox__quantity &nbsp;(!{quantity})

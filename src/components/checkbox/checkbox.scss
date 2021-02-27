@@ -1,0 +1,95 @@
+@import '~Base/mixins/reset-list-style.scss';
+@import '~Base/mixins/visually-hidden.scss';
+@import '~Base/theme.scss';
+
+.checkbox {
+  max-width: 20.714rem;
+
+  &__list {
+    @include reset-list-style;
+  }
+
+  &__item {
+    margin-bottom: 1rem;
+
+    &_disabled  {
+      opacity: 0.5;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__title {
+    margin: 0 0 1rem 0;
+    font-size: 1rem;
+    line-height: 1.357rem;
+  }
+
+  &__input {
+    @include visually-hidden;
+
+    & + .checkbox__label {
+      display: flex;
+      align-items: flex-start;
+      width: fit-content;
+      cursor: pointer;
+
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 1.071rem;
+        height: 1.071rem;
+        margin-right: 0.571rem;
+        flex-shrink: 0;
+        flex-grow: 0;
+        border: 0.071rem solid $dark-gray;
+        border-radius: 0.214rem;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 60% 60%;
+      }
+
+      &:hover {
+        color: $black;
+
+        &::before {
+          border-color: $yellow;
+        }
+      }
+    }
+
+    &:checked + .checkbox__label::before {
+      border-color: $yellow;
+      background-image: url('images/tick.svg');
+    }
+  }
+
+  &__label {
+    opacity: 0.7;
+  }
+
+  &__quantity {
+    color: $pewter;
+  }
+
+  &__clear-button {
+    font-family: Arial sans-serif;
+    font-size: 0.714rem;
+    line-height: 0.786rem;
+    text-align: right;
+    text-decoration-line: underline;
+    color: $pewter;
+    opacity: 0.5;
+    background-color: transparent;
+    border: none;
+
+    &:hover,
+    &:focus {
+      opacity: 0.9;
+    }
+  }
+}
