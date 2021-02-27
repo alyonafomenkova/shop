@@ -1,0 +1,12 @@
+mixin range-slider({ title } = options)
+  div.range-slider
+    h2.range-slider__title !{title}
+    div.range-slider__values-wrapper
+      div.range-slider__values-from-wrapper
+        label.range-slider__from-text от
+          input.range-slider__from-value.js-range-slider__from-value(type="text" min="0")
+      div.range-slider__values-to-wrapper
+        label.range-slider__to-text до
+          input.range-slider__to-value.js-range-slider__to-value(type="text" min="0")
+      span.range-slider__currency &#8381;
+    div(id="slider")

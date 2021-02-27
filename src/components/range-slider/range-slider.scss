@@ -1,0 +1,88 @@
+@import '~Base/theme.scss';
+@import '~Slider/nouislider.min.css';
+
+.range-slider {
+  &__title {
+    margin: 0 0 1.143rem 0;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.143rem;
+  }
+
+  &__values-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.357rem;
+  }
+
+  &__values-from-wrapper {
+    margin-right: 0.643rem;
+  }
+
+  &__values-to-wrapper {
+    margin-right: 0.643rem;
+  }
+
+  &__from-text,
+  &__to-text {
+    display: flex;
+    align-items: baseline;
+    font-family: Arial, sans-serif;
+    font-size: 0.857rem;
+    line-height: 1rem;
+    opacity: 0.5;
+  }
+
+  &__from-value,
+  &__to-value {
+    display: inline-block;
+    max-width: 7.857rem;
+    margin-left: 0.714rem;
+    padding: 0.857rem 0.929rem 0.857rem 0.857rem;
+    border: 0.071rem solid $dark-gray;
+    border-radius: 0.214rem;
+  }
+
+  &__currency {
+    font-family: Arial, sans-serif;
+    font-size: 0.857rem;
+    line-height: 1rem;
+    opacity: 0.5;
+  }
+}
+
+.noUi-target {
+  max-width: 20.714rem;
+  width: 100%;
+  height: 0.286rem;
+  background-color: $silver;
+  border-radius: 2.143rem;
+  border: none;
+}
+
+.noUi-connect {
+  background-color: $black;
+}
+
+.noUi-horizontal .noUi-handle {
+  width: 1rem;
+  height: 1rem;
+  right: -0.5rem;
+  background-color: $white;
+  border: 0.143rem solid $black;
+  border-radius: 50%;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.noUi-active {
+  box-shadow: none;
+}
+
+.noUi-handle:after,
+.noUi-handle:before,
+.noUi-handle:after {
+  display: none;
+}
