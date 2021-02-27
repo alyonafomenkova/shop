@@ -15,6 +15,7 @@ html {
 }
 
 body {
+  max-width: $desktop-width-l;
   height: 100%;
   margin: 0 auto;
 }
