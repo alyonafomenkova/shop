@@ -1,0 +1,24 @@
+include ../button/button
+
+mixin sorting(options = {})
+  -
+    const data = require('../../components/sorting/sorting.json');
+    const {
+      filters = data.filters,
+    } = options;
+
+  div.sorting
+    div.sorting__filters
+      span.sorting__text Сортировать по:
+      ul.sorting__filters-list
+        each item in filters
+          -
+            let { id, filter, isActive } = item;
+            const classes = isActive ? ' sorting__filters-button_active' : '';
+          li.sorting__filters-item
+            +button({
+              view: 'sorting-textual',
+              content: filter,
+              customClasses: `sorting__filters-button sorting__filters-button_type_${id}${classes}`,
+              state:  isActive && 'active'
+            })

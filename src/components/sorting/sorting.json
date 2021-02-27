@@ -1,0 +1,7 @@
+{
+  "filters": [
+    {"id": "popularity", "filter": "популярности", "isActive": true},
+    {"id": "cheap", "filter": "сначала дешевые"},
+    {"id": "expensive", "filter": "сначала дорогие"}
+  ]
+}

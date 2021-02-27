@@ -1,0 +1,24 @@
+@import '~Base/mixins/reset-list-style.scss';
+@import '~Base/theme.scss';
+
+.sorting {
+  &__filters {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__text {
+    margin-right: 0.714rem;
+    line-height: 1.357rem;
+  }
+
+  &__filters-list {
+    @include reset-list-style;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__filters-item {
+    margin-right: 1.143rem;
+  }
+}
