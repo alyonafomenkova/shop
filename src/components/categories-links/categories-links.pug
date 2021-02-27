@@ -1,0 +1,18 @@
+mixin categories-links(options = {})
+  -
+    const NUMBER_OF_VISIBLE_POINTS = 8;
+    const data = require('../../components/categories-links/categories-links.json');
+    const {
+      title = data.title,
+      items = data.items
+    } = options;
+  div.categories-links
+    h2.categories-links__title !{title}
+    ul.categories-links__list
+      each item, index in items
+        - let { title, clarification, href } = item;
+        li.categories-links__item.js-categories-links__item(class=index < NUMBER_OF_VISIBLE_POINTS && "categories-links__item-visible")
+          a.categories-links__link(href=href) !{title}&nbsp;
+            span.categories-links__clarification (!{clarification})
+    if (items.length > NUMBER_OF_VISIBLE_POINTS)
+      button.categories-links__more-button.js-categories-links__more-button(type="button") Ещё !{items.length - NUMBER_OF_VISIBLE_POINTS} категорий...

@@ -1,0 +1,54 @@
+@import '~Base/mixins/reset-list-style.scss';
+@import '~Base/theme.scss';
+
+.categories-links {
+  &__title {
+    margin: 0 0 1rem 0;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.143rem;
+    font-weight: normal;
+  }
+
+  &__list {
+    @include reset-list-style;
+  }
+
+  &__item {
+    display: none;
+    margin-bottom: 1rem;
+  }
+
+  &__item-visible {
+    display: block;
+  }
+
+  &__link {
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+    color: $blue;
+
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+  }
+
+  &__clarification {
+    color: $silk;
+  }
+
+  &__more-button {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    font-family: Arial, sans-serif;
+    color: $blue;
+
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+  }
+}
