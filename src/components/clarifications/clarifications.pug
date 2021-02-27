@@ -1,0 +1,22 @@
+include ../button/button
+
+mixin clarifications(options = {})
+  -
+    const data = require('../../components/clarifications/clarifications.json');
+    const {
+      clarifications = data.clarifications
+    } = options;
+
+  div.clarifications
+    ul.clarifications__list
+      each item in clarifications
+        -
+          let { id, clarification, isActive } = item;
+          const classes = isActive ? ' clarifications__button_active' : '';
+        li.clarifications__item
+          +button({
+            view: 'sorting',
+            content: clarification,
+            customClasses: `clarifications__button clarifications__button_id_${id}${classes}`,
+            state: isActive && 'active'
+          })

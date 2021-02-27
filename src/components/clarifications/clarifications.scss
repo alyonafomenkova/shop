@@ -1,0 +1,14 @@
+@import '~Base/mixins/reset-list-style.scss';
+@import '~Base/theme.scss';
+
+.clarifications {
+  &__list {
+    @include reset-list-style;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    margin: 0 0.714rem 1.429rem 0;
+  }
+}
