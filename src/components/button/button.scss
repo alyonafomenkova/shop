@@ -64,7 +64,7 @@
   }
 
   &_view_sorting {
-    padding: 0.5rem;
+    padding: 0.5rem 0.786rem 0.357rem 1.071rem;
     font-family: 'Open Sans', Arial, sans-serif;
     font-weight: normal;
     line-height: 1.357rem;
@@ -89,6 +89,7 @@
     &:hover,
     &-on-hover {
       color: $light-blue;
+      opacity: 0.7;
     }
 
     &-active {
