@@ -1,4 +1,4 @@
-mixin button({ type = 'button', view, state, url, content } = options)
+mixin button({ type = 'button', view, state, url, content, customClasses } = options)
   -
     const typeModifiers = {
       button: 'button_type_button',
@@ -20,7 +20,8 @@ mixin button({ type = 'button', view, state, url, content } = options)
     const classes = [
       typeModifiers[type],
       viewModifiers[view],
-      stateModifiers[state]
+      stateModifiers[state],
+      customClasses,
     ];
     const tag = type === 'link' ? 'a' : 'button';
     const buttonType = type === 'link' ? false : type;
