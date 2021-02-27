@@ -1,0 +1,7 @@
+mixin select({ items } = options)
+  div.select
+    span.select__text показывать&nbsp;по
+    select.select__item
+      each item in items
+        - let { option } = item;
+        option.select__option !{option}

@@ -1,0 +1,35 @@
+@import '~Base/theme.scss';
+
+.select {
+  display: flex;
+  align-items: baseline;
+
+  &__text {
+    margin-right: 0.714rem;
+  }
+
+  &__item {
+    display: block;
+    min-width: 3.571rem;
+    margin: 0;
+    padding: 0.429rem 0.571rem 0.5rem 0.714rem;
+    width: 100%;
+    max-width: 100%;
+    border: 0.071rem solid $dark-gray;
+    box-sizing: border-box;
+    border-radius: 0.214rem;
+    line-height: 1.357rem;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: $white;
+    background-image: url('images/select.svg');
+    background-repeat: no-repeat;
+    background-position: right 0.429rem top 50%;
+
+    &:hover,
+    &:focus {
+      border-color: $light-gray;
+    }
+  }
+}
