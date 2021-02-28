@@ -1,0 +1,56 @@
+@import '~Base/mixins/reset-list-style.scss';
+@import '~Base/theme.scss';
+@import '~Base/variables.scss';
+
+.pagination {
+  &__list {
+    @include reset-list-style;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+
+    @media(min-width: $tablet-width-l) {
+      justify-content: flex-start;
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial sans-serif;
+    font-size: 1.143rem;
+    line-height: 1.286rem;
+    opacity: 0.5;
+    cursor: pointer;
+
+    &_value_current {
+      margin-left: 2.214rem;
+      opacity: 1;
+    }
+
+    &_value_dots {
+      margin: 0 0.714rem 0 0.643rem;
+      opacity: 1;
+    }
+
+    &_value_next {
+      margin-left: 30px;
+      position: relative;
+
+      &::after {
+        content: '';
+        width: 0.714rem;
+        height: 0.714rem;
+        transform: rotate(-45deg);
+        position: absolute;
+        top: -0.643rem;
+        right: 0;
+        border: 0.071rem solid $black;
+        border-top-width: 0;
+        border-left-width: 0;
+      }
+    }
+  }
+}
