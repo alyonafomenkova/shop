@@ -1,0 +1,56 @@
+extends ../../base/base.pug
+include  ../../components/button/button.pug
+include  ../../components/categories/categories.pug
+include  ../../components/categories-links/categories-links.pug
+include  ../../components/checkbox/checkbox.pug
+include  ../../components/clarifications/clarifications.pug
+include  ../../components/goods/goods.pug
+include  ../../components/header/header.pug
+include  ../../components/pagination/pagination.pug
+include  ../../components/range-slider/range-slider.pug
+include  ../../components/search-form/search-form.pug
+include  ../../components/select/select.pug
+include  ../../components/sorting/sorting.pug
+
+block vars
+
+block meta
+  meta(name="keywords", content="Diginetica")
+  meta(name="description" content="Diginetica")
+
+block title
+  | Diginetica
+
+block content
+  +header
+  main.search
+    +search-form
+    div.search__result
+      div.search__result-description
+        h2.search__result-title Результаты по запросу
+        span.search__description Показаны результаты для “Запрос пользозвателя”. Вы искали “Запрос пользователя”.
+      +categories
+      div.search__wrapper
+        div.search__aside
+          +categories-links
+          div.search__slider-wrapper
+            +range-slider({title: 'Цена, валюта'})
+          div.search__checkbox-wrapper
+            +checkbox({
+              title: 'Бренды',
+              items: [
+                {name: 'brands', label: 'Бренд', quantity: 'xxx'},
+                {name: 'brands', label: 'Бренд', quantity: 'x'},
+                {name: 'brands', label: 'Бренд', quantity: 'xxxx'},
+              ]
+            })
+        div.search__content-wrapper
+          div.search__top-wrapper
+            +sorting
+            +select({items: [{option: 6}, {option: 12}, {option: 24}]})
+          div.search__clarifications-wrapper
+            +clarifications
+          div.search__goods-wrapper
+            +goods
+          div.search__pagination-wrapper
+            +pagination
