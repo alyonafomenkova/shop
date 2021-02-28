@@ -1,0 +1,13 @@
+{
+  "items": [
+    {"title": "Наименование товара, которое не более 2 строк", "href": "mock", "price": "ХХХХХ", "currency": "$", "fullPrice":  "ХХХХХ", "imgSrc":  "", "alt":  "Img"},
+    {"title": "Наименование товара, которое не более 2 строк", "href": "mock", "price": "ХХХХХ", "currency": "$", "fullPrice":  "ХХХХХ", "imgSrc":  "", "alt":  "Img"},
+    {"title": "Наименование товара, которое не более 2 строк", "href": "mock", "price": "ХХХХХ", "currency": "$", "fullPrice":  "ХХХХХ", "imgSrc":  "", "alt":  "Img"},
+    {"title": "Наименование товара, которое не более 2 строк", "href": "mock", "price": "ХХХХХ", "currency": "$", "fullPrice":  "ХХХХХ", "imgSrc":  "", "alt":  "Img"},
+    {"title": "Наименование товара, которое не более 2 строк", "href": "mock", "price": "ХХХХХ", "currency": "$", "fullPrice":  "ХХХХХ", "imgSrc":  "", "alt":  "Img"},
+    {"title": "Наименование товара, которое не более 2 строк", "href": "mock", "price": "ХХХХХ", "currency": "$", "fullPrice":  "ХХХХХ", "imgSrc":  "", "alt":  "Img"},
+    {"title": "Наименование товара, которое не более 2 строк", "href": "mock", "price": "ХХХХХ", "currency": "$", "fullPrice":  "ХХХХХ", "imgSrc":  "", "alt":  "Img"},
+    {"title": "Наименование товара, которое не более 2 строк", "href": "mock", "price": "ХХХХХ", "currency": "$", "fullPrice":  "ХХХХХ", "imgSrc":  "", "alt":  "Img"},
+    {"title": "Наименование товара, которое не более 2 строк", "href": "mock", "price": "ХХХХХ", "currency": "$", "fullPrice":  "ХХХХХ", "imgSrc":  "", "alt":  "Img"}
+  ]
+}

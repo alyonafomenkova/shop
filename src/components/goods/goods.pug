@@ -1,0 +1,21 @@
+include ../button/button
+
+mixin goods(options = {})
+  -
+    const data = require('../../components/goods/goods.json');
+    const { items = data.items } = options;
+  div.goods
+    ul.goods__list
+      each item, index in items
+        - let { title, href, price, currency, fullPrice, imgSrc, alt } = item;
+        li.goods__item
+          a.goods__link(href=href)
+            div.goods__img-wrapper
+              img.goods__img(src=imgSrc alt=alt)
+            span.goods__title !{title}
+            div.goods__price-wrapper
+              span.goods__price !{price}&nbsp;,&nbsp;
+              span.goods__currency !{currency}
+              span.goods__full-price !{price},&nbsp;
+              span.goods__currency !{currency}
+            +button({view: 'filled', content: 'Кнопка' })

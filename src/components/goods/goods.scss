@@ -1,0 +1,77 @@
+@import '~Base/mixins/reset-list-style.scss';
+@import '~Base/theme.scss';
+@import '~Base/variables.scss';
+
+.goods {
+  max-width: 62rem;
+  margin: 0 auto;
+
+  &__list {
+    @include reset-list-style;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__item {
+    width: 18.571rem;
+    margin: 0 3.143rem 2.929rem 0;
+
+    @media (min-width: $desktop-width-s) {
+      &:nth-child(3n+3) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    text-decoration: none;
+    color: $black;
+  }
+
+  &__img-wrapper {
+    width: 18.571rem;
+    height: 18.571rem;
+    margin-bottom: 0.714rem;
+    background-color: $silver;
+    border-radius: 0.214rem;
+  }
+
+  &__title {
+    font-family: Arial sans-serif;
+    line-height: 1.286rem;
+    letter-spacing: 0.01em;
+    color: $black;
+  }
+
+  &__price-wrapper {
+    margin: 1.286rem 0 1.143rem 0;
+  }
+
+  &__price {
+    font-size: 1.143rem;
+    line-height: 1.143rem;
+    font-weight: bold;
+  }
+
+  &__currency {
+    margin-right: 1.571rem;
+    font-size: 1.143rem;
+    line-height: 1.143rem;
+    font-weight: bold;
+  }
+
+  &__full-price {
+    text-decoration-line: line-through;
+    color: $silver;
+
+    + .goods__currency {
+      font-size: 1rem;
+      line-height: 1.143rem;
+      font-weight: normal;
+      color: $silver;
+    }
+  }
+}
