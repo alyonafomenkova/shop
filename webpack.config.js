@@ -7,7 +7,7 @@ const PATHS = {
   build: path.join(__dirname, 'build'),
 };
 const devMode = process.env.NODE_ENV !== 'production';
-const pages = ['main'];
+const pages = ['search'];
 
 const common = {
   entry: {
@@ -19,10 +19,13 @@ const common = {
   },
   resolve: {
     alias: {
+      Glider: path.resolve(__dirname, 'node_modules/glider-js'),
+      Slider: path.resolve(__dirname, 'node_modules/nouislider/distribute/'),
       Base: path.resolve(__dirname, 'src/base/'),
       Fonts: path.resolve(__dirname, 'src/assets/fonts'),
       Normalize: path.resolve(__dirname, 'node_modules/normalize.scss/normalize.scss'),
     },
+    extensions: ['.js', '.scss', '.css']
   },
   module: {
     rules: [
@@ -88,7 +91,7 @@ pages.forEach((page) => {
 const devConfig = {
   mode: 'development',
   devServer: {
-    index: 'main.html',
+    index: 'search.html',
     contentBase: path.join(__dirname, 'build'),
     compress: true,
     hot: true,
