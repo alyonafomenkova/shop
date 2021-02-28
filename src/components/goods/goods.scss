@@ -4,7 +4,6 @@
 
 .goods {
   max-width: 62rem;
-  margin: 0 auto;
 
   &__list {
     @include reset-list-style;
@@ -12,6 +11,10 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+
+    @media(min-width: $tablet-width-l) {
+      justify-content: flex-start;
+    }
   }
 
   &__item {
