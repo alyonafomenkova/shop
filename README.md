@@ -1,6 +1,5 @@
 # Shop - верстка интернет-магазина
 
-### UIkit:<br/>
 - [Демо-страница](https://alyonafomenkova.github.io/shop/search.html)
 
 ---
